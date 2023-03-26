@@ -25,7 +25,7 @@
 ![revoke_claim](files/revoke_claim.png)
 
 ## After Revoke Claim
-![after_revoke](files/after_revoke_claim.png)
+![after_revoke](files/after_revoke.png)
 
 ## Transfer Claim
 
