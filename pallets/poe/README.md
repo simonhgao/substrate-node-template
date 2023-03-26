@@ -12,6 +12,7 @@
 ![init_state](files/init_state.png)
 
 ## Create Claim
+[code](https://github.com/simonhgao/substrate-node-template/blob/coconu/proof_exercise/pallets/poe/src/lib.rs)
 
 ### Create Claim By Alice
 ![create_claim](files/create_claim.png)
@@ -20,6 +21,7 @@
 ![after_create](files/after_create.png)
 
 ## Revoke Claim
+[code](https://github.com/simonhgao/substrate-node-template/blob/coconu/proof_exercise/pallets/poe/src/lib.rs)
 
 ### Revoke Claim By Alice
 ![revoke_claim](files/revoke_claim.png)
@@ -28,6 +30,7 @@
 ![after_revoke](files/after_revoke.png)
 
 ## Transfer Claim
+[code](https://github.com/simonhgao/substrate-node-template/blob/coconu/proof_exercise/pallets/poe/src/lib.rs)
 
 ### Create Claim By Alice
 ![create](files/create_claim_by_alice.png)
