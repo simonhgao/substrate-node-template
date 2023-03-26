@@ -275,6 +275,7 @@ impl pallet_template::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
 }
 
+/// Configure the pallet-poe in pallets/poe.
 impl pallet_poe::Config for Runtime {
 	type MaxClaimLength = ConstU32<512>;
 	type RuntimeEvent = RuntimeEvent;

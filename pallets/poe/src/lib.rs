@@ -1,6 +1,6 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
-pub use frame_system::pallet::*;
+pub use pallet::*;
 
 #[frame_support::pallet]
 pub mod pallet {
@@ -32,6 +32,7 @@ pub mod pallet {
 	pub enum Event<T: Config> {
 		ClaimCreated(T::AccountId, Vec<u8>),
 		ClaimRevoked(T::AccountId, Vec<u8>),
+		ClaimTransfered(T::AccountId, T::AccountId, Vec<u8>),
 	}
 
 	#[pallet::error]
@@ -93,8 +94,8 @@ pub mod pallet {
 			let (owner, _block_number) =
 				Proofs::<T>::get(&bounded_claim).ok_or(Error::<T>::ClaimNotExist)?;
 			ensure!(owner == sender, Error::<T>::NotClaimOwner);
-			Proofs::<T>::insert(&bounded_claim, (dest, _block_number));
-
+			Proofs::<T>::insert(&bounded_claim, (dest, frame_system::Pallet::<T>::block_number()));
+			Self::deposit_event(Event::ClaimTransfered(owner, sender, claim));
 			Ok(().into())
 		}
 	}
